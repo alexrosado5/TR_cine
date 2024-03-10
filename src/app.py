@@ -1,4 +1,4 @@
-# Importar lliberies
+# Importar llibreries
 import streamlit as st
 
 # Títol webpage
