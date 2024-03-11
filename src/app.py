@@ -1,6 +1,7 @@
 # Importar llibreries
 import streamlit as st
 
+
 # Pàgina principal
 
 # Títol webpage
