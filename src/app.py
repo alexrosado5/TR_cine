@@ -1,5 +1,10 @@
 # Importar llibreries
 import streamlit as st
+from streamlit_gsheets import GSheetsConnection
+
+
+#Sheet connection
+
 
 def homepage(session_state):
     # Pàgina principal
@@ -41,7 +46,6 @@ def homepage(session_state):
         if st.button("17:45", key = "Botó 3") == True:
             session_state.counter = 4
             st.rerun()
-       
 
 #Subpagina Openheimer(x1)
 def openheimer():
