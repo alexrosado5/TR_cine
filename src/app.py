@@ -123,7 +123,7 @@ def openheimer(session_state):
     # Custom HTML/CSS for the banner
     custom_html = """
     <div class="banner">
-        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/main/assets/Banner.png" alt="Banner Image">
+        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/main/assets/Pantalla%20cine.png" alt="Banner Image">
     </div>
     <style>
         .banner {
@@ -139,10 +139,8 @@ def openheimer(session_state):
     """
     # Display the custom HTML
     st.components.v1.html(custom_html)
-    image3 = "../assets/Pantalla cine.png"
     st.write("")
     st.write("")
-    st.image(image3, width=800)
     st.write("")
 
     col1, col2, col3, col4, col5, col6, col7, col8 = st.columns(8)
