@@ -77,12 +77,12 @@ def homepage(session_state):
     # Custom HTML/CSS for the banner
     custom_html = """
     <div class="banner">
-        <img src="https://img.freepik.com/premium-photo/wide-banner-with-many-random-square-hexagons-charcoal-dark-black-color_105589-1820.jpg" alt="Banner Image">
+        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/main/assets/Banner.png" alt="Banner Image">
     </div>
     <style>
         .banner {
             width: 160%;
-            height: 200px;
+            height: 400px;
             overflow: hidden;
         }
         .banner img {
@@ -117,13 +117,13 @@ def openheimer(session_state):
             occuped_chairs.append(chairs_opp[i])
 
     #Setup pagina oppenhimer
-    st.image("../assets/Oppenheimert.png", width=450)
+    st.image("../assets/Oppenheimert.png")
     st.write("*Hora de la sessió: 17:00h. Preu de l'entrada: 9€*")
     st.write("Escull el teu seient.")
     image3 = "../assets/Pantalla cine.png"
     st.write("")
     st.write("")
-    st.image(image3, width= 800)
+    st.image(image3, width=800)
     st.write("")
 
     col1, col2, col3, col4, col5, col6, col7, col8 = st.columns(8)
