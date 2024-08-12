@@ -524,21 +524,22 @@ def openheimer(session_state):
             st.write("Confirma el teu seient")
             st.write("*Els diners no seràn retornats en cap cas.*")
             chair = st.text_input("Confirma el seient seleccionat")
-            if st.checkbox("Comprar") and session_state==chair:
-                row_index = oppenheimer_worksheet[oppenheimer_worksheet["CHAIRS"]==chair].index[0]
-                oppenheimer_worksheet.at[row_index, "AVAILABILITY"]="O"
-                conn.update(worksheet="openheimer",data=oppenheimer_worksheet)
-                st.cache_data.clear()
-                st.success("Compra feta")
-                time.sleep(2)
-                modal.close()
-                st.rerun()
-            else:
-                time.sleep(6)
-                st.error("Introdueix el seient correcte")
-                time.sleep(2)
-                modal.close()
-                st.rerun()
+            if st.checkbox("Comprar"):
+                if session_state.a==chair:
+                    row_index = oppenheimer_worksheet[oppenheimer_worksheet["CHAIRS"]==chair].index[0]
+                    oppenheimer_worksheet.at[row_index, "AVAILABILITY"]="O"
+                    conn.update(worksheet="openheimer",data=oppenheimer_worksheet)
+                    st.cache_data.clear()
+                    st.success("Compra feta")
+                    time.sleep(2)
+                    modal.close()
+                    st.rerun()
+                else:
+                    time.sleep(6)
+                    st.error("Introdueix el seient correcte")
+                    time.sleep(2)
+                    modal.close()
+                    st.rerun()
     st.write("")
     st.write("")
     st.write("")
