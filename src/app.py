@@ -50,8 +50,6 @@ def homepage(session_state):
     st.title("Benvinguts al cinema de l'Àlex!🍿📽️")
     st.header("Cartellera de la setmana")
     st.write("")
-    image_poster = "../assets/Posters.svg"
-    st.image(image_poster,width=1300)
 
     # Fotos peli
     ##setup
@@ -59,18 +57,21 @@ def homepage(session_state):
 
     ##Foto 1
     with col1:
+        st.image("../assets/oppemheimer2.jpeg", width=300)
         if st.button("Disponibilitat", key="Botó 1")== True:
             session_state.counter = 2
             st.rerun()
        
     ##Foto 2
     with col2:
+        st.image("../assets/barbiesi.jpg", width=316)
         if st.button("Disponibilitat", key= "Botó 2") == True:
             session_state.counter = 3
             st.rerun()
 
     ##Foto 3
     with col3:
+        st.image("../assets/sociedad.jpg",width=320)
         if st.button("Disponibilitat", key = "Botó 3") == True:
             session_state.counter = 4
             st.rerun()
@@ -95,6 +96,7 @@ def homepage(session_state):
     st.components.v1.html(custom_html)
 #Subpagina Openheimer(x1)
 def openheimer(session_state):
+    set_background("../assets/Fondo homepage.jpg")
 
     modal = Modal(
     "Confirma el teu seient", 
@@ -155,6 +157,7 @@ def openheimer(session_state):
         else:
             if st.button("A_01", key="A_01"):
                 modal.open()
+                session_state.a = "A_01"
    
         
         if "A_02" in occuped_chairs:
@@ -164,6 +167,7 @@ def openheimer(session_state):
         else:
             if st.button("A_02", key="A_02"):
                 modal.open()
+                session_state.a = "A_02"
                
             
         if "A_03" in occuped_chairs:
@@ -172,6 +176,7 @@ def openheimer(session_state):
         else:
             if st.button("A_03", key="A_03"):
                 modal.open()
+                session_state.a = "A_03"
 
                 
 
@@ -181,6 +186,7 @@ def openheimer(session_state):
         else:
             if st.button("A_04", key="A_04"):
                 modal.open()
+                session_state.a = "A_04"
 
         if "A_05" in occuped_chairs:
             st.button("A_05")
@@ -188,6 +194,7 @@ def openheimer(session_state):
         else:
             if st.button("A_05", key="A_05"):
                 modal.open()
+                session_state.a = "A_05"
 
         if "A_06" in occuped_chairs:
             st.button("A_06")
@@ -195,6 +202,7 @@ def openheimer(session_state):
         else:
             if st.button("A_06", key="A_06"):
                 modal.open()
+                session_state.a = "A_06"
 
         if "A_07" in occuped_chairs:
             st.button("A_07")
@@ -202,6 +210,7 @@ def openheimer(session_state):
         else:
             if st.button("A_07", key="A_07"):
                 modal.open()
+                session_state.a = "A_07"
 
     with col3:
         if "B_01" in occuped_chairs:
@@ -210,6 +219,7 @@ def openheimer(session_state):
         else:
             if st.button("B_01", key="B_01"):
                 modal.open()
+                session_state.a = "B_01"
                 
         
         if "B_02" in occuped_chairs:
@@ -218,6 +228,7 @@ def openheimer(session_state):
         else:
             if st.button("B_02", key="B_02"):
                 modal.open()
+                session_state.a = "B_02"
                 
         
         if "B_03" in occuped_chairs:
@@ -226,6 +237,7 @@ def openheimer(session_state):
         else:
             if st.button("B_03", key="B_03"):
                 modal.open()
+                session_state.a = "B_03"
                 
 
         if "B_04" in occuped_chairs:
@@ -234,6 +246,7 @@ def openheimer(session_state):
         else:
             if st.button("B_04", key="B_04"):
                 modal.open()
+                session_state.a = "B_04"
                 
 
         if "B_05" in occuped_chairs:
@@ -242,6 +255,7 @@ def openheimer(session_state):
         else:
             if st.button("B_05", key="B_05"):
                 modal.open()
+                session_state.a = "B_05"
                 
 
         if "B_06" in occuped_chairs:
@@ -250,6 +264,7 @@ def openheimer(session_state):
         else:
             if st.button("B_06", key="B_06"):
                 modal.open()
+                session_state.a = "B_016"
                 
 
         if "B_07" in occuped_chairs:
@@ -258,6 +273,7 @@ def openheimer(session_state):
         else:
             if st.button("B_07", key="B_07"):
                 modal.open()
+                session_state.a = "B_07"
                 
 
     with col4:
@@ -267,6 +283,7 @@ def openheimer(session_state):
         else:
             if st.button("C_01", key="C_01"):
                 modal.open()
+                session_state.a = "C_01"
 
 
         if "C_02" in occuped_chairs:
@@ -275,6 +292,7 @@ def openheimer(session_state):
         else:
             if st.button("C_02", key="C_02"):
                 modal.open()
+                session_state.a = "C_02"
                 
 
         if "C_03" in occuped_chairs:
@@ -283,6 +301,7 @@ def openheimer(session_state):
         else:
             if st.button("C_03", key="C_03"):
                 modal.open()
+                session_state.a = "C_03"
                 
 
         if "C_04" in occuped_chairs:
@@ -291,6 +310,7 @@ def openheimer(session_state):
         else:
             if st.button("C_04", key="C_04"):
                 modal.open()
+                session_state.a = "C_04"
                 
 
         if "C_05" in occuped_chairs:
@@ -299,6 +319,7 @@ def openheimer(session_state):
         else:
             if st.button("C_05", key="C_05"):
                 modal.open()
+                session_state.a = "C_05"
                 
 
         if "C_06" in occuped_chairs:
@@ -307,6 +328,7 @@ def openheimer(session_state):
         else:
             if st.button("C_06", key="C_06"):
                 modal.open()
+                session_state.a = "C_06"
 
         if "C_07" in occuped_chairs:
             st.button("C_07")
@@ -314,6 +336,7 @@ def openheimer(session_state):
         else:
             if st.button("C_07", key="C_07"):
                 modal.open()
+                session_state.a = "C_07"
     with col5:
         pass
 
@@ -324,6 +347,7 @@ def openheimer(session_state):
         else:
             if st.button("D_01", key="D_01"):
                 modal.open()
+                session_state.a = "D_01"
 
         if "D_02" in occuped_chairs:
             st.button("D_02")
@@ -331,6 +355,7 @@ def openheimer(session_state):
         else:
             if st.button("D_02", key="D_02"):
                 modal.open()
+                session_state.a = "D_02"
                 
 
         if "D_03" in occuped_chairs:
@@ -339,6 +364,7 @@ def openheimer(session_state):
         else:
             if st.button("D_03", key="D_03"):
                 modal.open()
+                session_state.a = "D_03"
                 
 
         if "D_04" in occuped_chairs:
@@ -347,6 +373,7 @@ def openheimer(session_state):
         else:
             if st.button("D_04", key="D_04"):
                 modal.open()
+                session_state.a = "D_04"
                 
 
         if "D_05" in occuped_chairs:
@@ -355,6 +382,7 @@ def openheimer(session_state):
         else:
             if st.button("D_05", key="D_05"):
                 modal.open()
+                session_state.a = "D_05"
                 
 
         if "D_06" in occuped_chairs:
@@ -363,6 +391,7 @@ def openheimer(session_state):
         else:
             if st.button("D_06", key="D_06"):
                 modal.open()
+                session_state.a = "D_06"
                 
 
         if "D_07" in occuped_chairs:
@@ -371,6 +400,7 @@ def openheimer(session_state):
         else:
             if st.button("D_07", key="D_07"):
                 modal.open()
+                session_state.a = "D_07"
 
     with col7:
         if "E_01" in occuped_chairs:
@@ -379,6 +409,7 @@ def openheimer(session_state):
         else:
             if st.button("E_01", key="E_01"):
                 modal.open()
+                session_state.a = "E_01"
 
         if "E_02" in occuped_chairs:
             st.button("E_02")
@@ -386,6 +417,7 @@ def openheimer(session_state):
         else:
             if st.button("E_02", key="E_02"):
                 modal.open()
+                session_state.a = "E_02"
 
         if "E_03" in occuped_chairs:
             st.button("E_03")
@@ -393,6 +425,7 @@ def openheimer(session_state):
         else:
             if st.button("E_03", key="E_03"):
                 modal.open()
+                session_state.a = "E_03"
 
         if "E_04" in occuped_chairs:
             st.button("E_04")
@@ -400,6 +433,7 @@ def openheimer(session_state):
         else:
             if st.button("E_04", key="E_04"):
                 modal.open()
+                session_state.a = "E_04"
 
         if "E_05" in occuped_chairs:
             st.button("E_05")
@@ -407,6 +441,7 @@ def openheimer(session_state):
         else:
             if st.button("E_05", key="E_05"):
                 modal.open()
+                session_state.a = "E_05"
 
         if "E_06" in occuped_chairs:
             st.button("E_06")
@@ -414,6 +449,7 @@ def openheimer(session_state):
         else:
             if st.button("E_06", key="E_06"):
                 modal.open()
+                session_state.a = "E_06"
 
         if "E_07" in occuped_chairs:
             st.button("E_07")
@@ -421,6 +457,7 @@ def openheimer(session_state):
         else:
             if st.button("E_07", key="E_07"):
                 modal.open()
+                session_state.a = "E_07"
 
     
     with col8:
@@ -430,6 +467,7 @@ def openheimer(session_state):
         else:
             if st.button("F_01", key="F_01"):
                 modal.open()
+                session_state.a = "F_01"
 
         if "F_02" in occuped_chairs:
             st.button("F_02")
@@ -437,6 +475,7 @@ def openheimer(session_state):
         else:
             if st.button("F_02", key="F_02"):
                 modal.open()
+                session_state.a = "F_02"
 
         if "F_03" in occuped_chairs:
             st.button("F_03")
@@ -444,6 +483,7 @@ def openheimer(session_state):
         else:
             if st.button("F_03", key="F_03"):
                 modal.open()
+                session_state.a = "F_03"
 
         if "F_04" in occuped_chairs:
             st.button("F_04")
@@ -451,6 +491,7 @@ def openheimer(session_state):
         else:
             if st.button("F_04", key="F_04"):
                 modal.open()
+                session_state.a = "F_04"
 
         if "F_05" in occuped_chairs:
             st.button("F_05")
@@ -458,6 +499,7 @@ def openheimer(session_state):
         else:
             if st.button("F_05", key="F_05"):
                 modal.open()
+                session_state.a = "F_05"
 
         if "F_06" in occuped_chairs:
             st.button("F_06")
@@ -465,6 +507,7 @@ def openheimer(session_state):
         else:
             if st.button("F_06", key="F_06"):
                 modal.open()
+                session_state.a = "F_06"
 
         if "F_07" in occuped_chairs:
             st.button("F_07")
@@ -472,14 +515,16 @@ def openheimer(session_state):
         else:
             if st.button("F_07", key="F_07"):
                 modal.open()
+                session_state.a = "F_07"
 
 
 #Contingut dels modals
     if modal.is_open():
         with modal.container():
             st.write("Confirma el teu seient")
-            chair = st.text_input("Confirma el teu seient")
-            if st.checkbox("Comprar"):
+            st.write("*Els diners no seràn retornats en cap cas.*")
+            chair = st.text_input("Confirma el seient seleccionat")
+            if st.checkbox("Comprar") and session_state==chair:
                 row_index = oppenheimer_worksheet[oppenheimer_worksheet["CHAIRS"]==chair].index[0]
                 oppenheimer_worksheet.at[row_index, "AVAILABILITY"]="O"
                 conn.update(worksheet="openheimer",data=oppenheimer_worksheet)
@@ -488,6 +533,48 @@ def openheimer(session_state):
                 time.sleep(2)
                 modal.close()
                 st.rerun()
+            else:
+                time.sleep(6)
+                st.error("Introdueix el seient correcte")
+                time.sleep(2)
+                modal.close()
+                st.rerun()
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    
+    col1, col2, col3, col4, col5, col6, col7, col8 = st.columns(8)
+    with col1:
+        pass
+    
+    with col2:
+        pass
+
+    with col3:
+        pass
+
+    with col4:
+        pass
+
+    with col5:
+        pass
+
+    with col6:
+        pass
+
+    with col7:
+        pass
+
+    with col8:
+        if st.button("Retornar"):
+            session_state.counter=1
+            st.rerun()
             
 
 def barbie():
