@@ -81,7 +81,7 @@ def homepage(session_state):
     </div>
     <style>
         .banner {
-            width: 160%;
+            width: 110%;
             height: 200px;
             overflow: hidden;
         }
@@ -120,6 +120,25 @@ def openheimer(session_state):
     st.image("../assets/Oppenheimert.png")
     st.write("*Hora de la sessió: 17:00h. Preu de l'entrada: 9€*")
     st.write("Escull el teu seient.")
+    # Custom HTML/CSS for the banner
+    custom_html = """
+    <div class="banner">
+        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/main/assets/Banner.png" alt="Banner Image">
+    </div>
+    <style>
+        .banner {
+            width: 110%;
+            height: 200px;
+            overflow: hidden;
+        }
+        .banner img {
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+    """
+    # Display the custom HTML
+    st.components.v1.html(custom_html)
     image3 = "../assets/Pantalla cine.png"
     st.write("")
     st.write("")
