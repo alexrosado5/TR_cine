@@ -82,7 +82,7 @@ def homepage(session_state):
     <style>
         .banner {
             width: 160%;
-            height: 400px;
+            height: 200px;
             overflow: hidden;
         }
         .banner img {
