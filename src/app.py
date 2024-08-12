@@ -573,7 +573,7 @@ def openheimer(session_state):
         pass
 
     with col8:
-        if st.button("Retornar"):
+        if st.button("Pàgina d'inici"):
             session_state.counter=1
             st.rerun()
             
