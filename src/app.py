@@ -26,6 +26,11 @@ def set_background(png_file):
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
+#Funció per custom form 
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown("f<tyle>{f.read()}</style>", unsafe_allow_html=True)
+
 #Funció per canviar color dels botons
 def ChangeButtonColour(widget_label, font_color, background_color='transparent'):
     htmlstr = f"""
@@ -1679,6 +1684,20 @@ def nieve(session_state):
             st.rerun()
                 
 
+
+def contact():
+    st.header(":mailbox: Contacte amb nosaltres!")
+    contact_form = """
+    <form action="https://formsubmit.co/contactcustomform@gmail.com" method="POST">
+     <input type="text" name="name" required>
+     <input type="email" name="email" required>
+     <button type="submit">Send</button>
+    </form>
+    """
+    st.markdown(contact_form, unsafe_allow_html=True )
+
+    local_css()
+
 #Funció principal de la pàgina
 def main():
     
@@ -1694,7 +1713,7 @@ def main():
     if "c" not in session_state:
         session_state.c = 0
 
-    paginas = ["Inici", "Oppenheimer", "Barbie", "Nieve"]
+    paginas = ["Inici", "Oppenheimer", "Barbie", "Nieve","Pàgina de contacte"]
     st.sidebar.title("Navega pel cinema")
     pagina_seleccionada = st.sidebar.radio("Selecciona la pàgina", paginas, index=session_state.counter -1)
     if pagina_seleccionada =="Inici":
@@ -1705,6 +1724,9 @@ def main():
         nieve(session_state)
     elif pagina_seleccionada == "Barbie":
         barbie(session_state)
+    elif pagina_seleccionada == "Pàgina de contacte":
+        contact()
+
     
 if __name__=="__main__":
 
