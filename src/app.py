@@ -52,11 +52,11 @@ def ChangeButtonColour(widget_label, font_color, background_color='transparent')
 def homepage(session_state):
 
     # Pàgina principal
-    set_background("/assets/Fondo homepage.jpg")
+    set_background("assets/Fondo homepage.jpg")
     # Títol webpage
-    st.image("/assets/titulo.png")
+    st.image("assets/titulo.png")
     st.write("")
-    st.image("/assets/Cartellera.png",width=700)
+    st.image("assets/Cartellera.png",width=700)
     st.write("")
     st.write("")
     st.write("")
@@ -69,28 +69,28 @@ def homepage(session_state):
 
     ##Foto 1
     with col1:
-        st.image("/assets/oppemheimer2.jpeg", width=300)
+        st.image("assets/oppemheimer2.jpeg", width=300)
         if st.button("Disponibilitat", key="Botó 1")== True:
             session_state.counter = 2
             st.rerun()
        
     ##Foto 2
     with col2:
-        st.image("/assets/barbiesi.jpg", width=316)
+        st.image("assets/barbiesi.jpg", width=316)
         if st.button("Disponibilitat", key= "Botó 2") == True:
             session_state.counter = 3
             st.rerun()
 
     ##Foto 3
     with col3:
-        st.image("/assets/sociedad.jpg",width=320)
+        st.image("assets/sociedad.jpg",width=320)
         if st.button("Disponibilitat", key = "Botó 3") == True:
             session_state.counter = 4
             st.rerun()
     # Custom HTML/CSS for the banner
     custom_html = """
     <div class="banner">
-        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/main/assets/Banner.png" alt="Banner Image">
+        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/mainassets/Banner.png" alt="Banner Image">
     </div>
     <style>
         .banner {
@@ -108,7 +108,7 @@ def homepage(session_state):
     st.components.v1.html(custom_html)
 #Subpagina Openheimer(x1)
 def openheimer(session_state):
-    set_background("/assets/Fondo homepage.jpg")
+    set_background("assets/Fondo homepage.jpg")
 
     modal = Modal(
     "Confirma el teu seient", 
@@ -131,13 +131,13 @@ def openheimer(session_state):
             occuped_chairs.append(chairs_opp[i])
 
     #Setup pagina oppenhimer
-    st.image("/assets/Oppenheimert.png")
+    st.image("assets/Oppenheimert.png")
     st.write("*Hora de la sessió: 17:00h. Preu de l'entrada: 9€*")
     st.write("Escull el teu seient.")
     # Custom HTML/CSS for the banner
     custom_html = """
     <div class="banner">
-        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/main/assets/Pantalla%20cine.png" alt="Banner Image">
+        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/mainassets/Pantalla%20cine.png" alt="Banner Image">
     </div>
     <style>
         .banner {
@@ -635,7 +635,7 @@ def openheimer(session_state):
 
 def barbie(session_state):
 
-    set_background("/assets/Fondo homepage.jpg")
+    set_background("assets/Fondo homepage.jpg")
     modal = Modal(
     "Confirma el teu seient", 
     key="modals",)
@@ -657,13 +657,13 @@ def barbie(session_state):
         if availability_opp[i]=="O":
             occuped_chairs.append(chairs_opp[i])
 
-    st.image("/assets/barbielove.png", width=300)
+    st.image("assets/barbielove.png", width=300)
     st.write("*Hora de la sessió: 20:30h. Preu de l'entrada: 9€*")
     st.write("Escull el teu seient.")
     # Custom HTML/CSS for the banner
     custom_html = """
     <div class="banner">
-        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/main/assets/Pantalla%20cine.png" alt="Banner Image">
+        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/mainassets/Pantalla%20cine.png" alt="Banner Image">
     </div>
     <style>
         .banner {
@@ -1160,7 +1160,7 @@ def barbie(session_state):
 
     
 def nieve(session_state):
-    set_background("/assets/Fondo homepage.jpg")
+    set_background("assets/Fondo homepage.jpg")
     modal = Modal(
     "Confirma el teu seient", 
     key="modals",)
@@ -1182,14 +1182,14 @@ def nieve(session_state):
         if availability_opp[i]=="O":
             occuped_chairs.append(chairs_opp[i])
     
-    st.image("/assets/La Sociedad de la nieve.png",width=1000)
+    st.image("assets/La Sociedad de la nieve.png",width=1000)
     st.write("*Hora de la sessió: 22:30h. Preu de l'entrada: 9€*")
     st.write("Escull el teu seient.")
 
     # Custom HTML/CSS for the banner
     custom_html = """
     <div class="banner">
-        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/main/assets/Pantalla%20cine.png" alt="Banner Image">
+        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/mainassets/Pantalla%20cine.png" alt="Banner Image">
     </div>
     <style>
         .banner {
@@ -1689,8 +1689,8 @@ def nieve(session_state):
 
 def contact():
 
-    set_background("/assets/Fondo homepage.jpg")
-    st.image("/assets/Contactes.png")
+    set_background("assets/Fondo homepage.jpg")
+    st.image("assets/Contactes.png")
 
 
     contact_form = """
