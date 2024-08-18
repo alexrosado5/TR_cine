@@ -90,7 +90,7 @@ def homepage(session_state):
     # Custom HTML/CSS for the banner
     custom_html = """
     <div class="banner">
-        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/mainassets/Banner.png" alt="Banner Image">
+        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/main/assets/Banner.png" alt="Banner Image">
     </div>
     <style>
         .banner {
@@ -137,7 +137,7 @@ def openheimer(session_state):
     # Custom HTML/CSS for the banner
     custom_html = """
     <div class="banner">
-        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/mainassets/Pantalla%20cine.png" alt="Banner Image">
+        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/main/assets/Pantalla%20cine.png" alt="Banner Image">
     </div>
     <style>
         .banner {
@@ -663,7 +663,7 @@ def barbie(session_state):
     # Custom HTML/CSS for the banner
     custom_html = """
     <div class="banner">
-        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/mainassets/Pantalla%20cine.png" alt="Banner Image">
+        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/main/assets/Pantalla%20cine.png" alt="Banner Image">
     </div>
     <style>
         .banner {
@@ -1189,7 +1189,7 @@ def nieve(session_state):
     # Custom HTML/CSS for the banner
     custom_html = """
     <div class="banner">
-        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/mainassets/Pantalla%20cine.png" alt="Banner Image">
+        <img src="https://raw.githubusercontent.com/alexrosado5/TR_cine/main/assets/Pantalla%20cine.png" alt="Banner Image">
     </div>
     <style>
         .banner {
