@@ -13,7 +13,7 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 .DS_Store
-src/.streamlit/secrets.toml
+.streamlit/secrets.toml
 # Mono auto generated files
 mono_crash.*
 
