@@ -7,6 +7,8 @@ from streamlit_modal import Modal
 import time
 import base64
 from PIL import Image
+import pandas as pd
+
 #Expandir la pagina
 st.set_page_config(layout="wide")
 # Background image
@@ -573,7 +575,7 @@ def openheimer(session_state):
     if modal.is_open():
         with modal.container():
             st.write("Confirma el teu seient")
-            st.write("*Els diners no seràn retornats en cap cas.*")
+            st.write("*Els diners no seran retornats en cap cas.*")
             chair = st.text_input("Confirma el seient seleccionat")
             if st.checkbox("Comprar"):
                 if session_state.a==chair:
@@ -1099,7 +1101,7 @@ def barbie(session_state):
     if modal.is_open():
         with modal.container():
             st.write("Confirma el teu seient")
-            st.write("*Els diners no seràn retornats en cap cas.*")
+            st.write("*Els diners no seran retornats en cap cas.*")
             chair = st.text_input("Confirma el seient seleccionat")
             if st.checkbox("Comprar"):
                 if session_state.b==chair:
@@ -1625,7 +1627,7 @@ def nieve(session_state):
     if modal.is_open():
         with modal.container():
             st.write("Confirma el teu seient")
-            st.write("*Els diners no seràn retornats en cap cas.*")
+            st.write("*Els diners no seran retornats en cap cas.*")
             chair = st.text_input("Confirma el seient seleccionat")
             if st.checkbox("Comprar"):
                 if session_state.c==chair:
@@ -1686,17 +1688,30 @@ def nieve(session_state):
 
 
 def contact():
-    st.header(":mailbox: Contacte amb nosaltres!")
+
+    set_background("../assets/Fondo homepage.jpg")
+    st.image("../assets/Contactes.png")
+
+
     contact_form = """
     <form action="https://formsubmit.co/contactcustomform@gmail.com" method="POST">
-     <input type="text" name="name" required>
-     <input type="email" name="email" required>
-     <button type="submit">Send</button>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Nom..." required>
+        <input type="email" name="email" placeholder="Email..." required>
+        <textarea name="message" placeholder="El teu missatge..."></textarea>
+        <button type="submit">Send</button>
     </form>
     """
-    st.markdown(contact_form, unsafe_allow_html=True )
 
-    local_css()
+    st.markdown(contact_form, unsafe_allow_html=True)
+
+    # Use Local CSS File
+    def local_css(file_name):
+        with open(file_name) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+
+    local_css("../style/style.css")
 
 #Funció principal de la pàgina
 def main():
@@ -1759,16 +1774,37 @@ if __name__=="__main__":
     
     #Autent. de l'usuari
     authenticator = stauth.Authenticate(credentials, "Streamlit", "main")
-    name, authentication_status, username = authenticator.login("main")
-
+    name, authentication_status, username = authenticator.login("main")              
     #Si Autent. Run main
     if authentication_status:
         authenticator.logout(':red[Log out]', 'sidebar')
         main()
-    elif authentication_status == False:
+    if authentication_status == False:
         st.error("Usuari/Contrasenya incorrectes. Torna a provar.")
-    elif authentication_status == None:
-        st.warning("Inicia sessió")
+    if not authentication_status:
+        aux_submit = False  
+        with st.form(key="crear"):
+            st.subheader("Sign up")
+            user = st.text_input("Username")
+            password = st.text_input("Password", type="password")
+            submit = st.form_submit_button("Sign up")
+            if submit:
+                with st.spinner("Creant compte..."):
+                    for letter in password:
+                        if letter.isdigit():
+                            aux_submit = True
+                    time.sleep(3)
+                if len(password) <= 4 and aux_submit == False:
+                    st.warning("La contrasenya ha de tenir més de 4 caràcters i almenys un dígit")
+                else:
+                    new_row = {"USER": user, "PASSWORD": password}
+                    new_row_df = pd.DataFrame([new_row])
+                    afegir_worksheet = pd.concat([users_worksheet, new_row_df], ignore_index=True)
+                    conn.update(worksheet="users", data=afegir_worksheet)
+                    st.cache_data.clear()    
+                    st.success("Compte creat. Ves al Login") 
+                    time.sleep(1)
+                    st.rerun()
 
 
 
