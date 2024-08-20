@@ -41,7 +41,7 @@ Aquest projecte és una aplicació web que permet reservar seients per a pel·l�
 
 ## 📸 **Captures de Pantalla**
 
-![Pantalla Principal](/assets/Banner.png)
+![Pantalla Principal](/assets/captura1.png)
 ![Pàgina de Reserva](ruta/a/captura2.png)
 
 ## ⚙️ **Configuració Addicional**
