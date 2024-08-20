@@ -41,7 +41,7 @@ Aquest projecte és una aplicació web que permet reservar seients per a pel·l�
 
 ## 📸 **Captures de Pantalla**
 
-![Pantalla Principal](ruta/a/captura1.png)
+![Pantalla Principal](/assets/Banner.png)
 ![Pàgina de Reserva](ruta/a/captura2.png)
 
 ## ⚙️ **Configuració Addicional**
@@ -55,5 +55,5 @@ Aquest projecte és una aplicació web que permet reservar seients per a pel·l�
 
 ## 👤 **Autor**
 
-- **Nom:** [Àlex Rosado Rodríguez]
-- **Correu:** [alexrosadorodriguez5@gmail.com]
+- **Nom:** Àlex Rosado Rodríguez
+- **Correu:** alexrosadorodriguez5@gmail.com
