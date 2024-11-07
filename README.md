@@ -17,27 +17,6 @@ Aquest projecte és una aplicació web que permet reservar seients per a pel·l�
 - **Frontend addicional:** HTML, CSS (utilitzat en components específics per personalitzar l'aparença)
 - **Base de dades:** Google Sheets
 
-## 🚀 **Instal·lació i Ús**
-
-1. Clona el repositori:
-    ```bash
-    git clone https://github.com/alexrosado5/TR_cine.git
-    ```
-
-2. Instal·la les dependències:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. Executa l'aplicació:
-    ```bash
-    streamlit run app.py
-    ```
-
-4. Accedeix a l'aplicació:
-    ```
-    http://localhost:8501
-    ```
 
 ## 📸 **Captures de Pantalla**
 
@@ -58,3 +37,4 @@ Aquest projecte és una aplicació web que permet reservar seients per a pel·l�
 
 - **Nom:** Àlex Rosado Rodríguez
 - **Correu:** alexrosadorodriguez5@gmail.com
+- **Pàgina Web:** https://cinalex.streamlit.app/
